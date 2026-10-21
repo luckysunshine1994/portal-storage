@@ -39,10 +39,11 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 
 ## Library Test settings (xrPortal on Camera)
 
-- `skateTiltX` 180: the library scan comes out upside down, this flips it.
+- `skateTiltZ` 180 (and `skateTiltX` 0): flips the upside-down scan. Flipping on X instead (tried first) also turned the library back-to-front, putting it on the room side of the door.
 - `skateVerticalOffset` 0.7: puts the scan's floor at the real floor (2.7 was 2 m too high in the headset).
 - `dissolveDelay` 100000: switches off the dissolve-and-swap, so after you step through you stay in the library and see your room through the door.
-- Code changes in Library Test's own copy of xr-portal.js (the original project is untouched), each marked `// Library Test:`: 80% render resolution, Quest fixed foveation, a 1.5 s lock after each crossing so a jumpy anchor can't flip you back out, a forgiving doorway check, and portal depth copied from the official PlayCanvas splat-portal (skatepark) example: the door plane writes depth, the world seen through the door draws only beyond it (FUNC_GREATER), near clip 0.001, splat budget 500k.
+- Code changes in Library Test's own copy of xr-portal.js (the original project is untouched), each marked `// Library Test:`: 80% render resolution, Quest fixed foveation, a 1.5 s lock after each crossing so a jumpy anchor can't flip you back out, a forgiving doorway check. (A port of the official splat-portal depth method was tried and reverted on 21 Oct.)
+- `primarySplatDelay` 0 (was 10 s wait after the button press before the splat loads) and `debugMarkerDuration` 0 (hides the three coloured calibration spheres).
 
 ## Test results
 
@@ -50,3 +51,4 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 - 21 Oct 2026, LibrarySplat500K: better. Portal jumps but returns to its anchor; scene upside down; still overloaded. Stepping through flipped back to the room (dissolve/swap plus possible double crossing).
 - 21 Oct 2026, LibrarySplat250K flipped: could look through but not walk in (stayed a flat image). Likely cause: portal sits low, so the head passed above the opening and the crossing never counted. Floor was 2 m too high.
 - 21 Oct 2026: ported the official splat-portal example's depth method (previous script showed the library as a flat image in the frame, visible from both sides).
+- 21 Oct 2026: official depth method reverted (three spheres, still flat). Flip changed from X to Z.
