@@ -42,10 +42,11 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 - `skateTiltX` 180: the library scan comes out upside down, this flips it.
 - `skateVerticalOffset` 0.7: puts the scan's floor at the real floor (2.7 was 2 m too high in the headset).
 - `dissolveDelay` 100000: switches off the dissolve-and-swap, so after you step through you stay in the library and see your room through the door.
-- Code changes in Library Test's own copy of xr-portal.js (the original project is untouched), each marked `// Library Test:`: 80% render resolution, Quest fixed foveation, a 1.5 s lock after each crossing so a jumpy anchor can't flip you back out, and a forgiving doorway check (counts the crossing even if your head passes above or below the portal opening).
+- Code changes in Library Test's own copy of xr-portal.js (the original project is untouched), each marked `// Library Test:`: 80% render resolution, Quest fixed foveation, a 1.5 s lock after each crossing so a jumpy anchor can't flip you back out, a forgiving doorway check, and portal depth copied from the official PlayCanvas splat-portal (skatepark) example: the door plane writes depth, the world seen through the door draws only beyond it (FUNC_GREATER), near clip 0.001, splat budget 500k.
 
 ## Test results
 
 - 21 Oct 2026, Quest 3, Library Test with LibrarySplat1M: portal black for about a minute while loading, then painterly blur, heavy lag, the portal swims with head movement, and the headset needed a hard reset. 1M is over the limit for this setup. The working scenes are 500k.
 - 21 Oct 2026, LibrarySplat500K: better. Portal jumps but returns to its anchor; scene upside down; still overloaded. Stepping through flipped back to the room (dissolve/swap plus possible double crossing).
 - 21 Oct 2026, LibrarySplat250K flipped: could look through but not walk in (stayed a flat image). Likely cause: portal sits low, so the head passed above the opening and the crossing never counted. Floor was 2 m too high.
+- 21 Oct 2026: ported the official splat-portal example's depth method (previous script showed the library as a flat image in the frame, visible from both sides).
