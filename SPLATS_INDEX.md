@@ -8,8 +8,8 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 | Folder | What it is | Splats | Detail levels | Used in (PlayCanvas) | Added |
 |---|---|---|---|---|---|
 | `LibrarySplat1M` | Bookshop/library scan, cut to 1 million | 1,000,000 | 1 | **Library Test** → `splatUrl` (first scene through the door) | 21 Oct 2026 |
-| `LibrarySplat5M` | Bookshop/library scan, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k streaming levels) | 4 | **Library Test** → `riverLaganSplatUrl` (second scene, after the swap) | 21 Oct 2026 |
-| `RiverLaganSplat` | River Lagan | 500,000 | 1 | AR Portal Anchors Experiment (script default) | Aug 2026 |
+| `LibrarySplat5M` | Bookshop/library scan, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k streaming levels) | 4 | Not used. Was in Library Test `riverLaganSplatUrl`; removed 21 Oct 2026 because the 1M version alone already froze Quest 3 (the portal script has no streaming support, so it would load everything) | 21 Oct 2026 |
+| `RiverLaganSplat` | River Lagan | 500,000 | 1 | AR Portal Anchors Experiment (script default); Library Test → `riverLaganSplatUrl` (placeholder) | Aug 2026 |
 | `DesertPyramidsSplat` | Desert pyramids | 500,000 | 1 | AR Portal Anchors Experiment → `splatUrl` | Aug 2026 |
 | `RiverNileGashSplat` | River Nile / Gash | 500,000 | 1 | — | Aug 2026 |
 | `0_0` (root) | Loose copy of the River Lagan chunk (same files as `RiverLaganSplat/0_0`) | 500,000 | — | — | Aug 2026 |
@@ -33,3 +33,7 @@ Older entries were filled in from the files themselves; nothing in those folders
 4. Update the Camera's tags and this table.
 
 To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `LibrarySplat1M`), add a row here, and leave existing folders as they are.
+
+## Test results
+
+- 21 Oct 2026, Quest 3, Library Test with LibrarySplat1M: portal black for about a minute while loading, then painterly blur, heavy lag, the portal swims with head movement, and the headset needed a hard reset. 1M is over the limit for this setup. The working scenes are 500k.
