@@ -47,6 +47,15 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 - Radial splat sorting on (code, marked `// Library Test:`), as in the official splat-portal example, to reduce colour flicker when turning your head.
 - `primarySplatDelay` 0 (was 10 s wait after the button press before the splat loads) and `debugMarkerDuration` 0 (hides the three coloured calibration spheres).
 
+## Saved good version
+
+- PlayCanvas checkpoint **"GOOD VERSION 21 Oct 2026"** in Library Test (Version Control panel): walk-in works, room visible through door, LibrarySplat250K, transparent canvas, radial sorting. Restore it from Version Control if a later experiment goes wrong.
+
+## Streaming (in progress)
+
+- Code added (after the checkpoint): splat budget 300,000, and coarse-first loading for any library whose folder name contains `Stream`.
+- Desktop test: the existing `LibrarySplat5M` streams, but its coarsest level is 600k, above the 300k budget, so it would still overload Quest. A new set `LibrarySplatStream5M` with extra 300k and 150k levels is needed.
+
 ## Test results
 
 - 21 Oct 2026, Quest 3, Library Test with LibrarySplat1M: portal black for about a minute while loading, then painterly blur, heavy lag, the portal swims with head movement, and the headset needed a hard reset. 1M is over the limit for this setup. The working scenes are 500k.
