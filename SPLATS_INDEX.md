@@ -7,8 +7,8 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 
 | Folder | What it is | Splats | Detail levels | Used in (PlayCanvas) | Added |
 |---|---|---|---|---|---|
-| `LibrarySplat500K` | Bookshop/library scan, cut to 500k (same size as the working scenes) | 500,000 | 1 | **Library Test** → `splatUrl` (first scene through the door) | 21 Oct 2026 |
-| `LibrarySplat250K` | Bookshop/library scan, cut to 250k | 250,000 | 1 | **Library Test** → `riverLaganSplatUrl` (second scene, after the swap) | 21 Oct 2026 |
+| `LibrarySplat500K` | Bookshop/library scan, cut to 500k (same size as the working scenes) | 500,000 | 1 | Not used now. Ran better than 1M but still overloaded Quest 3 | 21 Oct 2026 |
+| `LibrarySplat250K` | Bookshop/library scan, cut to 250k | 250,000 | 1 | **Library Test** → `splatUrl` and `riverLaganSplatUrl` | 21 Oct 2026 |
 | `LibrarySplat1M` | Bookshop/library scan, cut to 1 million | 1,000,000 | 1 | Not used. Too heavy for Quest 3 (see Test results) | 21 Oct 2026 |
 | `LibrarySplat5M` | Bookshop/library scan, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k streaming levels) | 4 | Not used. Was in Library Test `riverLaganSplatUrl`; removed 21 Oct 2026 because the 1M version alone already froze Quest 3 (the portal script has no streaming support, so it would load everything) | 21 Oct 2026 |
 | `RiverLaganSplat` | River Lagan | 500,000 | 1 | AR Portal Anchors Experiment (script default) | Aug 2026 |
@@ -37,6 +37,14 @@ Older entries were filled in from the files themselves; nothing in those folders
 
 To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `LibrarySplat1M`), add a row here, and leave existing folders as they are.
 
+## Library Test settings (xrPortal on Camera)
+
+- `skateTiltX` 180: the library scan comes out upside down, this flips it.
+- `skateVerticalOffset` 2.7: puts the scan's floor at the portal's floor (floor measured from the splat data).
+- `dissolveDelay` 100000: switches off the dissolve-and-swap, so after you step through you stay in the library and see your room through the door.
+- Code changes in Library Test's own copy of xr-portal.js (the original project is untouched), each marked `// Library Test:`: 80% render resolution, Quest fixed foveation, and a 1.5 s lock after each crossing so a jumpy anchor can't flip you back out.
+
 ## Test results
 
 - 21 Oct 2026, Quest 3, Library Test with LibrarySplat1M: portal black for about a minute while loading, then painterly blur, heavy lag, the portal swims with head movement, and the headset needed a hard reset. 1M is over the limit for this setup. The working scenes are 500k.
+- 21 Oct 2026, LibrarySplat500K: better. Portal jumps but returns to its anchor; scene upside down; still overloaded. Stepping through flipped back to the room (dissolve/swap plus possible double crossing).
