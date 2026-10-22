@@ -9,6 +9,7 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 |---|---|---|---|---|---|
 | `LibrarySplat500K` | Bookshop/library scan, cut to 500k (same size as the working scenes) | 500,000 | 1 | Not used now. Ran better than 1M but still overloaded Quest 3 | 21 Oct 2026 |
 | `LibrarySplat250K` | Bookshop/library scan, cut to 250k | 250,000 | 1 | **Library Test** → `splatUrl` and `riverLaganSplatUrl` | 21 Oct 2026 |
+| `LibrarySplatStream5M` | Bookshop/library scan, full 5 million, streamed with light levels for Quest | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | Ready for Library Test streaming test (not switched on yet) | 22 Oct 2026 |
 | `LibrarySplat1M` | Bookshop/library scan, cut to 1 million | 1,000,000 | 1 | Not used. Too heavy for Quest 3 (see Test results) | 21 Oct 2026 |
 | `LibrarySplat5M` | Bookshop/library scan, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k streaming levels) | 4 | Not used. Was in Library Test `riverLaganSplatUrl`; removed 21 Oct 2026 because the 1M version alone already froze Quest 3 (the portal script has no streaming support, so it would load everything) | 21 Oct 2026 |
 | `RiverLaganSplat` | River Lagan | 500,000 | 1 | AR Portal Anchors Experiment (script default) | Aug 2026 |
@@ -54,7 +55,14 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 ## Streaming (in progress)
 
 - Code added (after the checkpoint): splat budget 300,000, and coarse-first loading for any library whose folder name contains `Stream`.
-- Desktop test: the existing `LibrarySplat5M` streams, but its coarsest level is 600k, above the 300k budget, so it would still overload Quest. A new set `LibrarySplatStream5M` with extra 300k and 150k levels is needed.
+- Desktop test: the existing `LibrarySplat5M` streams, but its coarsest level is 600k, above the 300k budget, so it would still overload Quest.
+- `LibrarySplatStream5M` (22 Oct): same scan with extra 300k and 150k levels (`temp\lod4.ply`, `temp\lod5.ply`), made with `run_stream5m.bat`. Uploaded, not yet switched on in Library Test.
+
+## Glass Sphere Test (PlayCanvas project)
+
+- New project, separate from Library Test. Script: `scripts/glass-sphere.js` (copy in this repo). Splat world cropped inside a floating glass ball in passthrough; tap to enter AR, trigger/pinch re-places the ball in front of you.
+- Uses `LibrarySplat250K` as a placeholder until the Belfast City Library scan is ready.
+- Transparent Canvas ON. No screen-grab refraction (doesn't run in WebXR); glossy shell instead.
 
 ## Test results
 
