@@ -25,7 +25,7 @@ Older entries were filled in from the files themselves; nothing in those folders
 
 - Source: `D:\GaussianSplatting\Projects\OrmeauPark\output\ormeaupark_splat.ply` (5M splats, LichtFeld, 23 Oct 2026, from 8 videos = 4 walks x 2 phones, 16 Oct). Quality PSNR 14.7 (trunks sharp, leaves/sky hazy). Notes in that folder's README.txt.
 - Quest versions made in `OrmeauPark\output\quest\` (same LOD method as the library, `--lod-chunk-extent 8`).
-- Placement measured from the COLMAP cameras and ground: scan is tilted and about 5x smaller than real size. In Ormeau Test: `skateTiltX` 1.5, `skateTiltZ` 159, `skateScale` 5.2, `skateVerticalOffset` 1.84 (ground 0.354 scan units below the scan origin; origin is on the walked path).
+- Placement measured from the COLMAP cameras and ground: scan is tilted and about 5x smaller than real size. In Ormeau Test: `skateTiltX` 1.5, `skateTiltZ` 159, `skateYaw` -90 (path runs straight through the door), `skateScale` 5.2, `skateVerticalOffset` 1.84 (ground 0.354 scan units below the scan origin; origin is on the walked path).
 
 ## Library splats — where they came from
 
@@ -55,6 +55,12 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 - Project setting **Transparent Canvas: ON** (was off in the new project; your Anchors project has it on). Without it the doorway is black from inside instead of showing the room.
 - Radial splat sorting on (code, marked `// Library Test:`), as in the official splat-portal example, to reduce colour flicker when turning your head.
 - `primarySplatDelay` 0 (was 10 s wait after the button press before the splat loads) and `debugMarkerDuration` 0 (hides the three coloured calibration spheres).
+
+## Ormeau Test (PlayCanvas project)
+
+- Copy of Library Test (same walk-in fixes, transparent canvas, radial sorting, 300k budget), made 24 Oct. Launch scene 2631845.
+- Its own copy of xr-portal.js adds two attributes, marked `// Ormeau Test:`: `skateScale` and `skateYaw`.
+- Desktop check: streams to ~298k splats; standing on the path at real eye height, upright, looking down the path through the door.
 
 ## Saved good version
 
