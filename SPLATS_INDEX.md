@@ -25,7 +25,7 @@ Older entries were filled in from the files themselves; nothing in those folders
 
 - Source: `D:\GaussianSplatting\Projects\OrmeauPark\output\ormeaupark_splat.ply` (5M splats, LichtFeld, 23 Oct 2026, from 8 videos = 4 walks x 2 phones, 16 Oct). Quality PSNR 14.7 (trunks sharp, leaves/sky hazy). Notes in that folder's README.txt.
 - Quest versions made in `OrmeauPark\output\quest\` (same LOD method as the library, `--lod-chunk-extent 8`).
-- Placement measured from the COLMAP cameras and ground: scan is tilted and about 5x smaller than real size. In Ormeau Test: `skateTiltX` 1.5, `skateTiltZ` 159, `skateYaw` -90 (path runs straight through the door), `skateScale` 5.2, `skateVerticalOffset` 0.24 (measured value 1.84 put the ground ~1.6 m too high in the headset, 24 Oct; lowered by 1.6).
+- Placement measured from the COLMAP cameras and ground: scan is tilted and about 5x smaller than real size. In Ormeau Test: `skateTiltX` 1.5, `skateTiltZ` 159, `skateYaw` 90 (walk towards the bench; -90 faces the other way down the path), `skateScale` 5.2, `skateVerticalOffset` 0.24 (measured value 1.84 put the ground ~1.6 m too high in the headset, 24 Oct; lowered by 1.6).
 
 ## Library splats — where they came from
 
