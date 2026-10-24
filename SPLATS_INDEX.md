@@ -59,7 +59,7 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 ## Ormeau Test (PlayCanvas project)
 
 - Copy of Library Test (same walk-in fixes, transparent canvas, radial sorting, 300k budget), made 24 Oct. Launch scene 2631845.
-- Its own copy of xr-portal.js adds two attributes, marked `// Ormeau Test:`: `skateScale` and `skateYaw`.
+- Its own copy of xr-portal.js adds, marked `// Ormeau Test:`: `skateScale`, `skateYaw`, and Tayo's voice (`voiceUrl` = `audio/Tayo_01_Ormeau_Park.mp3`, `voiceVolume`). The voice starts on the first green-cube touch (same moment the portal reveal starts), keeps playing inside the park, and stops when you leave AR. It is unlocked silently on the tap that starts AR, because browsers block sound without a tap. `audio/Tayo_02_Reminds_Me_Of_The_Farm.mp3` is stored for the next scene, not used yet.
 - Desktop check: streams to ~298k splats; standing on the path at real eye height, upright, looking down the path through the door.
 
 ## Saved good version
