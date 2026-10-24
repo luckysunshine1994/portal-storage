@@ -7,6 +7,7 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 
 | Folder | What it is | Splats | Detail levels | Used in (PlayCanvas) | Added |
 |---|---|---|---|---|---|
+| `PalmFarmStream2M` | Quiet Nigerian oil palm farm (second scene after Ormeau Park) | 1,920,000 (+960k, 480k, 300k, 150k levels) | 5 | **Ormeau Test** → `riverLaganSplatUrl` (appears after the park burns away) | 24 Oct 2026 |
 | `OrmeauParkStream5M` | Ormeau Park woodland paths, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | **Ormeau Test** → `splatUrl` (streamed, budget 300k) | 24 Oct 2026 |
 | `OrmeauPark300K` | Ormeau Park, cut to 300k | 300,000 | 1 | Fallback for Ormeau Test | 24 Oct 2026 |
 | `LibrarySplat500K` | Bookshop/library scan, cut to 500k (same size as the working scenes) | 500,000 | 1 | Not used now. Ran better than 1M but still overloaded Quest 3 | 21 Oct 2026 |
@@ -20,6 +21,11 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 | `0_0` (root) | Loose copy of the River Lagan chunk (same files as `RiverLaganSplat/0_0`) | 500,000 | — | — | Aug 2026 |
 
 Older entries were filled in from the files themselves; nothing in those folders was changed.
+
+## Palm farm splat — where it came from
+
+- Source: `Downloads\Quiet Nigerian Oil Palm Farm.spz` on the PC (1.92M splats, no extra colour bands). Converted and LOD-streamed here with splat-transform 3.10.1 (`--lod-chunk-extent 8`); the original file was not changed.
+- Already upright and roughly real size (y up, ground at y ~ 0.1, palms 8-12 m). Placement in Ormeau Test: `riverTiltX` 0, `riverTiltZ` 0, `riverYawOffset` 0, `riverForwardOffset` 0, `riverVerticalOffset` -1.7.
 
 ## Ormeau Park splats — where they came from
 
