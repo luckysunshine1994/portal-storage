@@ -1,0 +1,47 @@
+# Credits for props
+
+The Open to Stay props are converted from these models. CC-BY models need this credit in the work's credits. CC BY-SA: the converted splat is shared under the same licence.
+
+- "Tea set ("having tea with the family")" by Poly Haven (Poly Haven), CC0. https://polyhaven.com/a/tea_set_01
+- "Crocodile - animal" by Brian Trepanier (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/1be78d94f64e4952beeb74677f21143f
+- "crocodile high quality" by Beerus (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/a242e4634a234d3fb909c54b2c39d7b8
+- "Semi-Modern Train" by Yarek212 (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/f2933788134647ae9f98238e00ec97a4
+- "Low poly Passenger Train" by Aditya Voxel (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/3f6c325d7cd4472d8dbafac1ef9f03d6
+- "Railway carriage" by Poly by Google (Poly Pizza), CC-BY 3.0. https://poly.pizza/m/1EHZsD3ja38
+- "Car" by Quaternius (Poly Pizza), CC-BY 3.0. https://poly.pizza/m/HQ0hvRM2XR
+- "Google Pixel 2" by Gabriel Valdivia (Poly Pizza), CC-BY 3.0. https://poly.pizza/m/7ztvFoiPP6j
+- "Dog" by Quaternius (Poly Pizza), CC0 1.0. https://poly.pizza/m/2kUk0QqpCg
+- "Shiba Inu" by Quaternius (Poly Pizza), CC0 1.0. https://poly.pizza/m/y4wdQpg767
+- "Characters Pug" by Quaternius (Poly Pizza), CC-BY 3.0. https://poly.pizza/m/xvcUwuKl4c
+- "border collie" by vicente betoret ferrero (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/f5b9cb8ae12b46898afbc0d0e8cc8051
+- "Labrador Retriever puppy" by 3D Resource (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/1afaa69215604838911ccd3221e4a6d6
+- "Robin" by kenchoo (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/dd04863288ed4c5ea0d444945a4f67c2
+- "simple picnic blanket" by AlysiaC (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/57299a9fa8a54fd38601fc5d60e53b3e
+- "Picnic Set (free)" by Juliette(PurpleFox) (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/f9f63f71a7234b938d2e7256ff47a383
+- "Picnic basket - wicker" by Poly Haven (Poly Haven), CC0. https://polyhaven.com/a/wicker_basket_01
+- "Picnic Basket" by Poly by Google (Poly Pizza), CC-BY 3.0. https://poly.pizza/m/aWBGhxXig8y
+- "African Grey Parrot" by Gert-Jan van den Boom (Sketchfab), CC Attribution-ShareAlike. https://sketchfab.com/3d-models/6f729a4cb4db425599aa79257cc17c98
+- "Tropical Mango Trees" by Jagobo (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/6997814540f14929bf13cf3828b5dc90
+- "Cashew" by gelmi.com.br (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/db9d4dc84b7c4517ab2b73fe96dc44d4
+- "Cocoa Tree" by MVP_Kobesh (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/1f4b6fb21c844aada8350f9d598753db
+- "Mango Tree" by stealth86 (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/4b186052228d43d8b3fbb63213677de8
+- "Classic Machete" by JungleBird (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/175bb0580dee4890800ce56a6c83b831
+- "Machete" by Belonosoff (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/340a3bed238f48b0aa169c38e1e75066
+- "Open Book" by Quaternius (Poly Pizza), CC0 1.0. https://poly.pizza/m/FsCIGEfTEs
+- "Book Stack" by Danni Bittman (Poly Pizza), CC-BY 3.0. https://poly.pizza/m/1WggoIFq8tx
+- "Wooden reading chair (for the bookshop scan)" by Poly Haven (Poly Haven), CC0. https://polyhaven.com/a/WoodenChair_01
+- "Loaf of Bread" by Jarlan Perez (Poly Pizza), CC-BY 3.0. https://poly.pizza/m/adck7D-hul0
+- "Milk Carton" by mootiff (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/24373fdaccb94e2faa494d046ccde627
+- "Carton" by Kenney (Poly Pizza), CC0 1.0. https://poly.pizza/m/T2QjC2ZQya
+- "Grocery Bag" by Antoine Dresen (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/86d735e7933c4486aa60d70c55529b1b
+- "Paper Bag" by av_mod9 (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/22b06c54f69b4813824b29b7356396d7
+- "Recycled paper bag" by TBR_VFX (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/fe7dc479bc79439aa579de6e00b3b8fb
+- "Dorm Floor Mattress With Sheets [No Texture]" by Ingrid Bee (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/1fa7d1844949448b8b8abaf4183126c5
+- "Inflatable Mattress" by pantryDS (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/381dab8401274cea9ffda2c8451eae7b
+- "Sofa" by Poly Haven (Poly Haven), CC0. https://polyhaven.com/a/sofa_02
+- "Plastic chair (every seat they had)" by Poly Haven (Poly Haven), CC0. https://polyhaven.com/a/plastic_monobloc_chair_01
+- "Window Blinds Low poly 3D model" by AK STUDIO (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/642df0acc18f45d2af8eaa698bdccff7
+- "Blinds" by Geng4d (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/7de2fb69daba4301982230946ff69031
+- "Inflatable Boat" by emelyarules (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/051fe2f3a1484a0bafd45bad054754b1
+- "Dinghy" by quanci (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/1c62a45198444f12aed0f33b801c2e12
+- "Simple Mosque" by ferelian75 (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/cc24cab5418b43d981bce47f2ad98284
