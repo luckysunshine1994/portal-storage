@@ -483,61 +483,42 @@
    "splats": 10000
   },
   {
-   "id": "kowther-bonfire-boat-a",
+   "id": "kowther-bonfire-boat",
    "story": "kowther",
-   "label": "Bonfire silhouette: boat - inflatable",
-   "splat": "kowther/bonfire-boat-a.sog",
-   "size": 3.5,
-   "height": 0.66,
+   "label": "Bonfire silhouette: pallet tower with boat (from real photos)",
+   "splat": "kowther/bonfire-boat.sog",
+   "size": 6,
+   "height": 6,
    "y": 0,
-   "distance": 7,
-   "splats": 14000,
+   "distance": 9,
+   "splats": 35000,
    "silhouette": true,
    "tint": [
-    0.03,
-    0.03,
-    0.04
+    0.17,
+    0.16,
+    0.16
    ],
-   "ghostAmount": 1,
-   "opacity": 0.95
-  },
-  {
-   "id": "kowther-bonfire-boat-b",
-   "story": "kowther",
-   "label": "Bonfire silhouette: boat - dinghy",
-   "splat": "kowther/bonfire-boat-b.sog",
-   "size": 3.5,
-   "height": 0.87,
-   "y": 0,
-   "distance": 7,
-   "splats": 14000,
-   "silhouette": true,
-   "tint": [
-    0.03,
-    0.03,
-    0.04
-   ],
-   "ghostAmount": 1,
-   "opacity": 0.95
+   "ghostAmount": 0.7,
+   "opacity": 0.92
   },
   {
    "id": "kowther-bonfire-mosque",
    "story": "kowther",
-   "label": "Bonfire silhouette: mosque replica (generic)",
+   "label": "Bonfire silhouette: pallet tower with mosque replica (from real photos)",
    "splat": "kowther/bonfire-mosque.sog",
-   "size": 4,
-   "height": 4,
+   "size": 7,
+   "height": 7,
    "y": 0,
-   "distance": 8,
-   "splats": 16000,
+   "distance": 9,
+   "splats": 35000,
    "silhouette": true,
    "tint": [
-    0.03,
-    0.03,
-    0.04
+    0.17,
+    0.16,
+    0.16
    ],
-   "ghostAmount": 1,
-   "opacity": 0.95
+   "ghostAmount": 0.7,
+   "opacity": 0.92
   }
  ]
 }

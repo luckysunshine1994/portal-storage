@@ -71,9 +71,8 @@ To hide a prop: set `"enabled": false` on its line in props-manifest.json. To ch
 | `kowther/chair-plastic.sog` | Plastic chair (every seat they had) | 8,000 | 0.58 × 0.8 × 0.57 | [Poly Haven: Poly Haven](https://polyhaven.com/a/plastic_monobloc_chair_01) | CC0 |
 | `kowther/blinds-a.sog` | Blinds closing - option A | 10,000 | 0.06 × 1.14 × 1.2 | [Sketchfab: AK STUDIO](https://sketchfab.com/3d-models/642df0acc18f45d2af8eaa698bdccff7) | CC Attribution |
 | `kowther/blinds-b.sog` | Blinds closing - option B | 10,000 | 1.2 × 0.79 × 0.44 | [Sketchfab: Geng4d](https://sketchfab.com/3d-models/7de2fb69daba4301982230946ff69031) | CC Attribution |
-| `kowther/bonfire-boat-a.sog` | Bonfire silhouette: boat - inflatable (dark silhouette) | 14,000 | 3.5 × 0.66 × 3.2 | [Sketchfab: emelyarules](https://sketchfab.com/3d-models/051fe2f3a1484a0bafd45bad054754b1) | CC Attribution |
-| `kowther/bonfire-boat-b.sog` | Bonfire silhouette: boat - dinghy (dark silhouette) | 14,000 | 2.27 × 0.87 × 3.5 | [Sketchfab: quanci](https://sketchfab.com/3d-models/1c62a45198444f12aed0f33b801c2e12) | CC Attribution |
-| `kowther/bonfire-mosque.sog` | Bonfire silhouette: mosque replica (generic) (dark silhouette) | 16,000 | 5.65 × 4 × 4.92 | [Sketchfab: ferelian75](https://sketchfab.com/3d-models/cc24cab5418b43d981bce47f2ad98284) | CC Attribution |
+| `kowther/bonfire-boat.sog` | Bonfire silhouette: pallet tower with boat (from real photos) (dark ghost: darker than the others, shape still readable) | 35,000 | 4.34 × 6 × 4.02 | Katya Solomatina Katya Solomatina (Meshy AI, from real photos) | own work |
+| `kowther/bonfire-mosque.sog` | Bonfire silhouette: pallet tower with mosque replica (from real photos) (dark ghost: darker than the others, shape still readable) | 35,000 | 3.42 × 7 × 3.49 | Katya Solomatina Katya Solomatina (Meshy AI, from real photos) | own work |
 
 ## Not included
 
@@ -82,7 +81,3 @@ To hide a prop: set `"enabled": false` on its line in props-manifest.json. To ch
 ## Source models
 
 Original downloads are on the laptop in `Downloads\ots_props_split\` (Sketchfab) and `Downloads\ots_props_polypizza.zip`, `Downloads\ots_props_polyhaven.zip`. Not stored here (too big for GitHub).
-
-## The script
-
-`scripts/ghost-props.js` (PlayCanvas, on its own entity "GhostProps"). It streams the .sog files listed in `props-manifest.json` from this repo, shows them in waves (one story at a time, `perWave` at once) on an arc in front of you, builds each one up from drifting particles, holds, then burns it away. Touch one with a fingertip or controller and it pops. In AR it starts 8 s after the green cube is touched; on desktop Launch it starts after 2 s. All timings and the ghost colour are attributes on the entity.

@@ -43,7 +43,7 @@ const props = SPEC.map(s => {
   const size = r.size || null;
   const e = { id: s.story + '-' + s.id, story: s.story, label: s.label, splat: file, size: s.size, height: size ? size[1] : s.size, y: s.y || 0, distance: s.distance, splats: r.splats || (s.reuse ? 4000 : null) };
   if (s.yaw) e.yaw = s.yaw;
-  if (s.silhouette) Object.assign(e, { silhouette: true, tint: [0.03, 0.03, 0.04], ghostAmount: 1, opacity: 0.95 });
+  if (s.silhouette) Object.assign(e, { silhouette: true, tint: [0.17, 0.16, 0.16], ghostAmount: 0.7, opacity: 0.92 });
   return e;
 });
 fs.writeFileSync(path.join(OUT, 'props-manifest.json'), JSON.stringify({
@@ -59,7 +59,7 @@ for (const [k, title] of Object.entries(STORIES)) {
   for (const s of SPEC.filter(x => x.story === k)) {
     const r = results[s.story + '/' + s.id] || {};
     const c = s.reuse ? { site: 'same file as', author: s.reuse, lic: '', url: '' } : lic(s);
-    md += `| \`${s.reuse ? s.reuse : k + '/' + s.id + '.sog'}\` | ${s.label}${s.silhouette ? ' (dark silhouette)' : ''} | ${r.splats ? r.splats.toLocaleString('en-GB') : '—'} | ${r.size ? r.size.join(' × ') : '—'} | ${c.url ? `[${c.site}: ${c.author}](${c.url})` : c.site + ' ' + c.author} | ${c.lic} |\n`;
+    md += `| \`${s.reuse ? s.reuse : k + '/' + s.id + '.sog'}\` | ${s.label}${s.silhouette ? ' (dark ghost: darker than the others, shape still readable)' : ''} | ${r.splats ? r.splats.toLocaleString('en-GB') : '—'} | ${r.size ? r.size.join(' × ') : '—'} | ${c.url ? `[${c.site}: ${c.author}](${c.url})` : c.site + ' ' + c.author} | ${c.lic} |\n`;
   }
   md += '\n';
 }

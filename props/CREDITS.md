@@ -42,6 +42,5 @@ The Open to Stay props are converted from these models. CC-BY models need this c
 - "Plastic chair (every seat they had)" by Poly Haven (Poly Haven), CC0. https://polyhaven.com/a/plastic_monobloc_chair_01
 - "Window Blinds Low poly 3D model" by AK STUDIO (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/642df0acc18f45d2af8eaa698bdccff7
 - "Blinds" by Geng4d (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/7de2fb69daba4301982230946ff69031
-- "Inflatable Boat" by emelyarules (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/051fe2f3a1484a0bafd45bad054754b1
-- "Dinghy" by quanci (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/1c62a45198444f12aed0f33b801c2e12
-- "Simple Mosque" by ferelian75 (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/cc24cab5418b43d981bce47f2ad98284
+- "Bonfire silhouette: pallet tower with boat (from real photos)" by Katya Solomatina (Meshy AI, from real photos) (Katya Solomatina), own work. 
+- "Bonfire silhouette: pallet tower with mosque replica (from real photos)" by Katya Solomatina (Meshy AI, from real photos) (Katya Solomatina), own work. 
