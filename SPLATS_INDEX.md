@@ -16,7 +16,7 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 | `OrmeauPark300K` | Ormeau Park, cut to 300k | 300,000 | 1 | Fallback for Ormeau Test | 24 Oct 2026 |
 | `LibrarySplat500K` | Bookshop/library scan, cut to 500k (same size as the working scenes) | 500,000 | 1 | Not used now. Ran better than 1M but still overloaded Quest 3 | 21 Oct 2026 |
 | `LibrarySplat250K` | Bookshop/library scan, cut to 250k | 250,000 | 1 | **Glass Sphere Test** placeholder; Library Test `riverLaganSplatUrl` (unused); in the GOOD VERSION checkpoint | 21 Oct 2026 |
-| `LibrarySplatStream5M` | Bookshop/library scan, full 5 million, streamed with light levels for Quest | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | **Library Test** → `splatUrl` (streamed, budget 300k) | 22 Oct 2026 |
+| `LibrarySplatStream5M` | Bookshop/library scan, full 5 million, streamed with light levels for Quest | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | Was **Library Test** → `splatUrl` until 15 Nov 2026 (replaced by `BookshopNov2026Stream5M`); kept in checkpoint "BEFORE Bookshop Nov 2026 swap" | 22 Oct 2026 |
 | `LibrarySplat1M` | Bookshop/library scan, cut to 1 million | 1,000,000 | 1 | Not used. Too heavy for Quest 3 (see Test results) | 21 Oct 2026 |
 | `LibrarySplat5M` | Bookshop/library scan, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k streaming levels) | 4 | Not used. Was in Library Test `riverLaganSplatUrl`; removed 21 Oct 2026 because the 1M version alone already froze Quest 3 (the portal script has no streaming support, so it would load everything) | 21 Oct 2026 |
 | `RiverLaganSplat` | River Lagan | 500,000 | 1 | AR Portal Anchors Experiment (script default) | Aug 2026 |
@@ -79,6 +79,21 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 - Its own copy of xr-portal.js adds, marked `// Ormeau Test:`: `skateScale`, `skateYaw`, and Tayo's voice (`voiceUrl` = `audio/Tayo_01_Ormeau_Park.mp3`, `voiceVolume`). The voice starts on the first green-cube touch (same moment the portal reveal starts), keeps playing inside the park, and stops when you leave AR. It is unlocked silently on the tap that starts AR, because browsers block sound without a tap. Scene change (24 Oct): ~12 s before voice 1 ends, the palm farm (`PalmFarmStream2M`, second slot) starts loading hidden. When voice 1 ends, the park burns away with the existing dissolve shader (`dissolveDuration` 6 s), then the park is unloaded and the farm is revealed around you in the same place. Voice 2 (`voice2Url` = `audio/Tayo_02_Reminds_Me_Of_The_Farm.mp3`) starts `voice2Gap` = 2 s after voice 1 ends. `_applyMaterialState` changed so the second scene also surrounds you inside the door (room still visible through the door; from outside you'd see the farm through the door). PlayCanvas checkpoint saved: "24 Oct 2026: Ormeau Park walk-in + Tayo voice 1; voice end -> park burns away -> palm farm...".
 - Timing + colour update (24 Oct, v2): the park starts burning away `dissolveLeadTime` = 7 s before voice 1 ends (light blue edges, 6 s), so it has fully gone when Tayo stops. The palm farm then assembles with the same particle effect in reverse over `appearDuration` = 6 s, with warm orange-red fire edges (`appearEdgeColor`). Voice 2 now starts `voice2Gap` = 2 s after voice 1 actually ends, so "it reminds me..." plays while the farm is still forming. Farm preload moved to ~25 s before voice 1 ends. Checkpoint: "24 Oct 2026 v2: park burns away (blue) 7 s before voice 1 ends; palm farm assembles with orange-red fire...". Desktop sim: blue burn-away, then orange fire particles settle into the farm.
 - Desktop check: streams to ~298k splats; standing on the path at real eye height, upright, looking down the path through the door. Scene change simulated on desktop 24 Oct: park dissolves into glowing particles, then the palm farm appears upright at ground level around the viewer (~298k splats).
+
+## Library Test, 15 Nov 2026: Bookshop Nov 2026 swap
+
+- Checkpoint first: **"BEFORE Bookshop Nov 2026 swap (15 Nov 2026)"** (old LibrarySplatStream5M, tiltZ 180, offset 0.7). Restore it from Version Control to go back.
+- `splatUrl` → `BookshopNov2026Stream5M`, `riverLaganSplatUrl` → `BookshopNov2026Splat300K` (unused while swap is off). No code change.
+- Placement measured from the new scan's 5,945 COLMAP cameras and its floor: `skateTiltX` 4.25 and `skateTiltZ` 179 (flips it upright and removes a ~4° lean), `skateVerticalOffset` -0.25 (floor ~1.7 m below camera height in the scan; offset matched to the old library's headset-tested floor). (Likely) floor within ~0.3 m; adjust `skateVerticalOffset` if it feels high or low.
+- Desktop check: loads from GitHub with no errors, streams to ~299k splats under the 300k budget.
+
+## Lagan Test (PlayCanvas project, 15 Nov 2026)
+
+- Fork of Library Test made **before** the bookshop swap, so it has the same walk-in fixes, transparent canvas, radial sorting and 300k budget. Project 1648044, launch scene 2656451. Checkpoint: "Fresh copy of Library Test (15 Nov 2026), before Lagan changes". Adds about 160 KB to PlayCanvas storage (one script).
+- `splatUrl` → `LaganRiversideOct2026Stream5M`, `riverLaganSplatUrl` → `LaganRiversideOct2026Splat300K` (unused while swap is off).
+- Its own copy of xr-portal.js adds `skateScale` (marked `// Lagan Test:`), because the scan is about 6x smaller than real size.
+- Placement measured from 2,505 COLMAP cameras and the path surface: `skateTiltX` 8.75, `skateTiltZ` 182, `skateScale` 6, `skateVerticalOffset` 0.12. (guessing) The scale comes from assuming the phone was held ~1.4 m above the path; if people/benches look too big or small, change `skateScale`, then re-tune the offset. No yaw control yet, so the direction you face on entry is whatever the scan's own forward is.
+- Desktop check: loads from GitHub with no errors, streams to ~292k splats under the budget.
 
 ## Saved good version
 
