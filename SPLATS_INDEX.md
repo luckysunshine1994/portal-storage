@@ -7,6 +7,10 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 
 | Folder | What it is | Splats | Detail levels | Used in (PlayCanvas) | Added |
 |---|---|---|---|---|---|
+| `BookshopNov2026Stream5M` | **Bookshop Nov 2026**: second, more detailed bookshop scan (Canon R6 III + 2 iPhones), full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | **Library Test** → `splatUrl` (streamed, budget 300k) | 15 Nov 2026 |
+| `BookshopNov2026Splat300K` | Bookshop Nov 2026, cut to 300k | 300,000 | 1 | Fallback for Library Test | 15 Nov 2026 |
+| `LaganRiversideOct2026Stream5M` | **River Lagan riverside** (new detailed scan, 10 iPhone clips, 27 Oct 2026), full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | **Lagan Test** → `splatUrl` (streamed, budget 300k) | 15 Nov 2026 |
+| `LaganRiversideOct2026Splat300K` | River Lagan riverside (Oct 2026), cut to 300k | 300,000 | 1 | Fallback for Lagan Test | 15 Nov 2026 |
 | `PalmFarmStream2M` | Quiet Nigerian oil palm farm (second scene after Ormeau Park) | 1,920,000 (+960k, 480k, 300k, 150k levels) | 5 | **Ormeau Test** → `riverLaganSplatUrl` (appears after the park burns away) | 24 Oct 2026 |
 | `OrmeauParkStream5M` | Ormeau Park woodland paths, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | **Ormeau Test** → `splatUrl` (streamed, budget 300k) | 24 Oct 2026 |
 | `OrmeauPark300K` | Ormeau Park, cut to 300k | 300,000 | 1 | Fallback for Ormeau Test | 24 Oct 2026 |
@@ -42,6 +46,13 @@ Older entries were filled in from the files themselves; nothing in those folders
 - 5M version: 4 levels of detail in ~4 m chunks (`--lod-chunk-extent 4`), so the headset only loads the chunks near and in front of you.
 - Inside each `lod-meta.json` and each chunk's `meta.json`, file names were changed to full raw.githubusercontent links (same method as `RiverLaganSplat`), so the splat loads from GitHub wherever the project runs.
 - Sizes: LibrarySplat1M ≈ 12 MB, LibrarySplat5M ≈ 100 MB.
+
+## Bookshop Nov 2026 and River Lagan Oct 2026 splats — where they came from
+
+- **Bookshop Nov 2026** source: `D:\GaussianSplatting\Projects\LibraryV2\output\libraryv2_splat.ply` (5M splats, LichtFeld MRNF 100k steps, finished 31 Oct 2026). Footage filmed 27 Oct 2026: Canon R6 Mark III (main) + iPhone 17 Pro + iPhone 13 Pro, 6,005 frames, 99% placed by COLMAP. Notes and weak spots in that folder's README.txt. Replaces the older `Library*` folders in Library Test; those folders are kept unchanged.
+- **River Lagan Oct 2026** source: `D:\GaussianSplatting\Projects\LaganRiverside\output\laganriverside_splat.ply` (5M splats, LichtFeld MCMC 60k, 27 Oct 2026, from 10 iPhone clips IMG_9306–9315, 2,505 frames, 100% placed). Not the same as the older `RiverLaganSplat` (Aug 2026), which is kept unchanged.
+- Quest versions were made by each project's pipeline (`output\quest\`, splat-transform 3.10.1, base colour only, 6 detail levels down to 150k). Copied here unchanged apart from the file names inside `lod-meta.json` and each `meta.json`, which point at full raw.githubusercontent links (same method as the other folders).
+- Sizes: BookshopNov2026Stream5M ≈ 122 MB, LaganRiversideOct2026Stream5M ≈ 109 MB, each 300K ≈ 4 MB. Nothing was added to PlayCanvas storage.
 
 ## How to swap a splat in a PlayCanvas project
 
