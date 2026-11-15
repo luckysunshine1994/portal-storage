@@ -87,6 +87,12 @@ To add a new splat: put it in a new folder named `<Place>Splat<count>` (e.g. `Li
 - Placement measured from the new scan's 5,945 COLMAP cameras and its floor: `skateTiltX` 4.25 and `skateTiltZ` 179 (flips it upright and removes a ~4° lean), `skateVerticalOffset` -0.25 (floor ~1.7 m below camera height in the scan; offset matched to the old library's headset-tested floor). (Likely) floor within ~0.3 m; adjust `skateVerticalOffset` if it feels high or low.
 - Desktop check: loads from GitHub with no errors, streams to ~299k splats under the 300k budget.
 
+### Library Test, 15 Nov 2026 (evening): corridor entry + distance-only detail
+
+- Checkpoint first: **"BEFORE corridor entry + distance-only LOD (15 Nov 2026)"**.
+- **Entry point:** you now step in at the dead end of the narrow yellow-carpet corridor, facing along the carpet towards the shop (map: `docs/bookshop_entry_corridor.png`). New xrPortal settings, marked `// Library Test:` in the script: `skateEntryX` -1.357, `skateEntryY` -0.681, `skateEntryZ` -8.826 (that spot in the scan's own coordinates lands at the doorway) and `skateYaw` 180 (turns the scan so the corridor runs away from you). The dead-end wall sits ~0.4 m behind the door. Desktop check: entry point lands exactly at the door, corridor points straight ahead.
+- **Head-turn lag fix:** engine 2.23.3 re-picks splat detail every 90° of head turn and gives what's behind you less detail (`lodUpdateAngle` 90, `lodBehindPenalty` 1.5). In the small bookshop that made nearby shelves swap detail late as you turned. Now `lodUpdateAngle` 0 and `lodBehindPenalty` 1: detail depends only on distance, so turning your head changes nothing. Same files, same quality. Undo: set both back, or restore the checkpoint.
+
 ## Lagan Test (PlayCanvas project, 15 Nov 2026)
 
 - Fork of Library Test made **before** the bookshop swap, so it has the same walk-in fixes, transparent canvas, radial sorting and 300k budget. Project 1648044, launch scene 2656451. Checkpoint: "Fresh copy of Library Test (15 Nov 2026), before Lagan changes". Adds about 160 KB to PlayCanvas storage (one script).
