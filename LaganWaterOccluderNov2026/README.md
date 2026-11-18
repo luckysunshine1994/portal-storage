@@ -8,4 +8,4 @@ hides behind those things and covers the scan's own water and the loose blobs un
   river banks plus the bridge, from just above the water up to 4 scan units). Nothing in that folder was changed.
 - `lagan-water-occluder.bin.gz`: gzip of a bitmask, 1 bit per voxel, x fastest, then height above the water, then z.
 - `lagan-water-occluder.json`: voxel size (0.1 scan units, ~0.6 m), grid origin and size, water level and up vector used.
-- Size: 27 KB. Gaps closed without growing the shell outwards, so the water reaches the wall bases.
+- Size: 27 KB. Gaps closed without growing the shell outwards; its lowest 3 m stops at the traced bank lines (except at the bridge), so the water reaches the wall bases.
