@@ -1,1 +1,1 @@
-{"v": 0.12, "x0": -18, "z0": -6, "nx": 297, "ny": 35, "nz": 659, "waterLevel": -0.37, "up": [-0.03489876373319174, -0.987765009044321, 0.15199461568610728], "note": "occupied voxels of the 300K Lagan scan near the river; x fastest, then height above water, then z; bitmask, gzip"}
+{"v": 0.1, "x0": -18, "z0": -6, "nx": 357, "ny": 42, "nz": 792, "waterLevel": -0.37, "up": [-0.03489876373319174, -0.987765009044321, 0.15199461568610728], "note": "occupied voxels of the 300K Lagan scan near the river; x fastest, then height above water, then z; bitmask, gzip"}

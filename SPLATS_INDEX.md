@@ -11,7 +11,7 @@ Link format: `https://raw.githubusercontent.com/luckysunshine1994/portal-storage
 | `BookshopNov2026Splat300K` | Bookshop Nov 2026, cut to 300k | 300,000 | 1 | Fallback for Library Test | 15 Nov 2026 |
 | `LaganRiversideOct2026Stream5M` | **River Lagan riverside** (new detailed scan, 10 iPhone clips, 27 Oct 2026), full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | **Lagan Test** → `splatUrl` (streamed, budget 300k) | 15 Nov 2026 |
 | `LaganRiversideOct2026Splat300K` | River Lagan riverside (Oct 2026), cut to 300k | 300,000 | 1 | Fallback for Lagan Test | 15 Nov 2026 |
-| `LaganWaterOccluderNov2026` | Not a splat: invisible shell of the quay walls, railings and bridge from the Lagan 300K scan, so the water layer hides behind them (34 KB) | — | — | **Lagan Test** → `lagan-sunset.js` (water layer) | 18 Nov 2026 |
+| `LaganWaterOccluderNov2026` | Not a splat: invisible shell of the quay walls, railings and bridge from the Lagan 300K scan, so the water layer hides behind them (27 KB) | — | — | **Lagan Test** → `lagan-sunset.js` (water layer) | 18 Nov 2026 |
 | `PalmFarmStream2M` | Quiet Nigerian oil palm farm (second scene after Ormeau Park) | 1,920,000 (+960k, 480k, 300k, 150k levels) | 5 | **Ormeau Test** → `riverLaganSplatUrl` (appears after the park burns away) | 24 Oct 2026 |
 | `OrmeauParkStream5M` | Ormeau Park woodland paths, full 5 million, streamed | 5,000,000 (+2.5M, 1.25M, 600k, 300k, 150k levels) | 6 | **Ormeau Test** → `splatUrl` (streamed, budget 300k) | 24 Oct 2026 |
 | `OrmeauPark300K` | Ormeau Park, cut to 300k | 300,000 | 1 | Fallback for Ormeau Test | 24 Oct 2026 |
