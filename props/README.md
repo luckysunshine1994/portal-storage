@@ -65,6 +65,7 @@ To hide a prop: set `"enabled": false` on its line in props-manifest.json. To ch
 | `lagan/phone.sog` | Phones on the ground (calls home) - 1 | — | — | same file as lagan/phone.sog |  |
 | `lagan/phone.sog` | Phones on the ground (calls home) - 2 | — | — | same file as lagan/phone.sog |  |
 | `lagan/phone.sog` | Phones on the ground (calls home) - 3 | — | — | same file as lagan/phone.sog |  |
+| `lagan/balcony.sog` | Hassna's balcony facing the river (from her photo) | 21,987 | 3 × 1.72 × 2.9 | Katya Solomatina (Meshy AI, from Hassna's photo) | own work |
 | `kowther/mattress-floor.sog` | Mattress on the floor (17 people) | 15,000 | 2 × 0.42 × 1.18 | [Sketchfab: Ingrid Bee](https://sketchfab.com/3d-models/1fa7d1844949448b8b8abaf4183126c5) | CC Attribution |
 | `kowther/mattress-inflatable.sog` | Inflatable mattress | 12,000 | 1.9 × 0.19 × 1.63 | [Sketchfab: pantryDS](https://sketchfab.com/3d-models/381dab8401274cea9ffda2c8451eae7b) | CC Attribution |
 | `kowther/sofa.sog` | Sofa | 18,000 | 2 × 0.79 × 0.91 | [Poly Haven: Poly Haven](https://polyhaven.com/a/sofa_02) | CC0 |

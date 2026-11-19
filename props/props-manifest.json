@@ -96,6 +96,17 @@
    "splats": 4000
   },
   {
+   "id": "lagan-balcony",
+   "story": "lagan",
+   "label": "Hassna's balcony facing the river (from her photo)",
+   "splat": "lagan/balcony.sog",
+   "size": 3,
+   "height": 1.72,
+   "y": 0,
+   "distance": 2.5,
+   "splats": 21987
+  },
+  {
    "id": "tayo-dog-a",
    "story": "tayo",
    "label": "Dog (Ormeau Park) - generic",

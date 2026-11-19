@@ -44,3 +44,4 @@ The Open to Stay props are converted from these models. CC-BY models need this c
 - "Blinds" by Geng4d (Sketchfab), CC Attribution. https://sketchfab.com/3d-models/7de2fb69daba4301982230946ff69031
 - "Bonfire silhouette: pallet tower with boat (from real photos)" by Katya Solomatina (Meshy AI, from real photos) (Katya Solomatina), own work. 
 - "Bonfire silhouette: pallet tower with mosque replica (from real photos)" by Katya Solomatina (Meshy AI, from real photos) (Katya Solomatina), own work. 
+- "Hassna's balcony" by Katya Solomatina (Meshy AI, from Hassna's photo), own work.

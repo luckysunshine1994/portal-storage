@@ -13,6 +13,7 @@ const opt = (k, d) => { const i = args.indexOf('--' + k); return i >= 0 ? args[i
 const targetSize = parseFloat(opt('size', '1'));
 const count = parseInt(opt('count', '20000'));
 const sizeAxis = opt('axis', 'max'); // max | height
+const skipDark = parseFloat(opt('skipdark', '0'));
 const rotX = parseFloat(opt('rotx', '0')) * Math.PI / 180;
 const rotY = parseFloat(opt('roty', '0')) * Math.PI / 180;
 
@@ -34,7 +35,7 @@ async function getTex(tex) {
   try {
     const img = sharp(Buffer.from(tex.getImage())).ensureAlpha();
     const meta = await img.metadata();
-    const scale = Math.min(1, 512 / Math.max(meta.width, meta.height));
+    const scale = Math.min(1, parseInt(opt('texres', '512')) / Math.max(meta.width, meta.height));
     const w = Math.max(1, Math.round(meta.width * scale)), h = Math.max(1, Math.round(meta.height * scale));
     const data = await img.resize(w, h).raw().toBuffer();
     t = { w, h, data };
@@ -127,6 +128,7 @@ for (let i = 0; i < N; i++) {
     const tc = sampleTex(t.tex, uvv); col = [col[0] * tc[0], col[1] * tc[1], col[2] * tc[2], col[3] * tc[3]];
   } else if (t.ca) { col = [col[0] * t.ca[0], col[1] * t.ca[1], col[2] * t.ca[2], col[3]]; }
   if (t.alpha !== 'OPAQUE' && col[3] < 0.3) continue;
+  if (skipDark > 0 && (col[0] + col[1] + col[2]) / 3 < skipDark) continue;
   // glTF factors/vertex colours are linear; textures are sRGB. Approximate linear->sRGB for untextured colours.
   if (!(t.tex && t.ua)) col = [0, 1, 2].map(k => Math.pow(Math.max(0, col[k]), 1 / 2.2)).concat([col[3]]);
   const q = quatFromZ(t.n);
