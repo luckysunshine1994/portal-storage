@@ -98,13 +98,13 @@
   {
    "id": "lagan-balcony",
    "story": "lagan",
-   "label": "Hassna's balcony facing the river (from her photo)",
+   "label": "Hassna's balcony facing the river (from her photo, version 2)",
    "splat": "lagan/balcony.sog",
    "size": 3,
-   "height": 1.72,
+   "height": 1.89,
    "y": 0,
    "distance": 2.5,
-   "splats": 21987
+   "splats": 21314
   },
   {
    "id": "tayo-dog-a",
