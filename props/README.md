@@ -68,6 +68,7 @@ To hide a prop: set `"enabled": false` on its line in props-manifest.json. To ch
 | `lagan/balcony.sog` | Hassna's balcony facing the river (version 3, opened room, 19 Nov; made from `lagan/balcony-2-opened-room.glb`) | 20,240 | 3 × 2 × 2.73 | Katya Solomatina (Meshy AI, from Hassna's photo) | own work |
 | `lagan/balcony-2.glb` | Earlier 3D model of the balcony, version 2 (no longer used) | — | — | Katya Solomatina | own work |
 | `lagan/balcony-2-opened-room.glb` | Original 3D model of the balcony, version 3 with the room opened up (source for balcony.sog) | — | — | Katya Solomatina | own work |
+| `lagan/balcony-2-opened-room-updated.glb` | Updated 3D model of the balcony with the opened room (20 Nov), uploaded as-is | — | — | Katya Solomatina | own work |
 | `kowther/mattress-floor.sog` | Mattress on the floor (17 people) | 15,000 | 2 × 0.42 × 1.18 | [Sketchfab: Ingrid Bee](https://sketchfab.com/3d-models/1fa7d1844949448b8b8abaf4183126c5) | CC Attribution |
 | `kowther/mattress-inflatable.sog` | Inflatable mattress | 12,000 | 1.9 × 0.19 × 1.63 | [Sketchfab: pantryDS](https://sketchfab.com/3d-models/381dab8401274cea9ffda2c8451eae7b) | CC Attribution |
 | `kowther/sofa.sog` | Sofa | 18,000 | 2 × 0.79 × 0.91 | [Poly Haven: Poly Haven](https://polyhaven.com/a/sofa_02) | CC0 |
